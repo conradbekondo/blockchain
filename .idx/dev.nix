@@ -14,15 +14,16 @@
   ];
   env = {
     CLIENT_PORT = 4200;
-    SERVER_PORT = 7000;
+    SERVER_PORT = 8000;
   };
+
   idx.workspace = {
     onCreate = {
       npm-install = "yarn install";
     };
 
     onStart = {
-      start = "echo \"https://$CLIENT_PORT-$WEB_HOST\" && yarn serve:dev";
+      start = "echo \"https://$CLIENT_PORT-$WEB_HOST\" && yarn nx run-many --target=serve";
     };
   };
 }

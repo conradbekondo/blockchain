@@ -1,0 +1,15 @@
+{
+  "name": "client-web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/client/src",
+  "projectType": "application",
+  "tags": ["ui"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/client/**/*.{ts,spec.ts,tsx}"]
+      }
+    }
+  }
+}
